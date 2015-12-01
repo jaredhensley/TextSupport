@@ -10,7 +10,7 @@ module.exports = {
 
   sendMessage: function (req, res) {
     console.log(req.body);
-    res.send('hey');
+
 
     client.messages.create({
       body: req.body.body,
