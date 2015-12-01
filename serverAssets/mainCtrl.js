@@ -11,16 +11,21 @@ module.exports = {
   sendMessage: function (req, res) {
     console.log(req.body);
     res.send('hey');
-    /*
-        
-        client.messages.create({
-          body: "Jenny please?! I love you <3",
-          to: "+14159352345",
-          from: "+14158141829"
-        }, function (err, message) {
-          process.stdout.write(message.sid);
-        });
-    */
+
+    client.messages.create({
+      body: req.body.body,
+      to: req.body.to,
+      from: "your daddy"
+    }, function (err, message) {
+      console.log(err);
+      console.log(message);
+      var ref = new firebase('https://fs-text-support.firebaseio.com/numbers/' + message.to);
+      ref.push({
+        Body: message.body,
+        From: message.from
+      });
+      return res.json(message);
+    });
 
   }
 
