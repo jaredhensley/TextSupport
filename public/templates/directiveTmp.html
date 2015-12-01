@@ -4,5 +4,7 @@ Number: {{key}}
   <br> Time: {{x.Date}}
   <br>
 </div>
-<input type="text" placeholder="reply" ng-model="message" ng-submit="">
+<form ng-submit="reply()">
+  <input type="text" placeholder="reply" ng-model="message">
+</form>
 <hr>

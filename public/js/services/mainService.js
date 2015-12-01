@@ -3,7 +3,7 @@ angular.module('myApp').service('mainService', function ($http) {
   this.sendStuff = function (obj) {
     console.log('got called man');
     console.log(obj);
-    $http({
+    return $http({
 
       method: 'POST',
       url: 'http://localhost:3000/support/messages',

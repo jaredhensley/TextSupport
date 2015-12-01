@@ -15,9 +15,9 @@ module.exports = {
     client.messages.create({
       body: req.body.body,
       to: req.body.to,
-      from: "your daddy"
+      from: "+12029308984"
     }, function (err, message) {
-      console.log(err);
+      console.log('HOLY COW', err);
       console.log(message);
       var ref = new firebase('https://fs-text-support.firebaseio.com/numbers/' + message.to);
       ref.push({
