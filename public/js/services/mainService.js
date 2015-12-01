@@ -1,7 +1,8 @@
 angular.module('myApp').service('mainService', function ($http) {
 
   this.sendStuff = function (obj) {
-
+    console.log('got called man');
+    console.log(obj);
     $http({
 
       method: 'POST',
@@ -13,6 +14,8 @@ angular.module('myApp').service('mainService', function ($http) {
       }
 
 
+    }).then(function (res) {
+      console.log(res);
     });
 
 

@@ -1,4 +1,4 @@
-angular.module('myApp').controller('temp2Ctrl', function ($scope, $firebaseObject, $firebaseArray) {
+angular.module('myApp').controller('temp2Ctrl', function ($scope, $firebaseObject, $firebaseArray, mainService) {
 
   var ref = new Firebase('https://fs-text-support.firebaseio.com/numbers');
 
